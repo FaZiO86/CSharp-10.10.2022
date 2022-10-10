@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using static System.Net.WebRequestMethods;
-using System.ComponentModel;
+
 
 namespace CSharp_10._10._2022 {
     internal class Program {
