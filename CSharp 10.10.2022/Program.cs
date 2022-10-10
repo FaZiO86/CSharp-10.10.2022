@@ -17,10 +17,7 @@ namespace CSharp_10._10._2022 {
             for (int i = 0; i < arr.Length; i++) {
                 if (i%2 != 0 && (arr[i] < -2 | arr[i] %2 == 0)) {
                     summ += arr[i];
-                    
                     sw.WriteLine(arr[i]);
-                    
-                    //File.AppendAllText(path + "numbers.txt", arr[i].ToString());
                     Console.WriteLine(arr[i]);
                 }
 
@@ -30,7 +27,7 @@ namespace CSharp_10._10._2022 {
             var sw2 = new StreamWriter(path + "\\" + "summ.txt");
             sw2.WriteLine(summ);
             sw2.Close();
-            //File.WriteAllText(path + "summ.txt", summ.ToString());
+            
             
             Console.ReadKey();
         }
