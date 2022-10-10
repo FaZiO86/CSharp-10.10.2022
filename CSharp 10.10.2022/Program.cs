@@ -9,9 +9,12 @@ using System.IO;
 namespace CSharp_10._10._2022 {
     internal class Program {
         static void Main(string[] args) {
-
-           
-
+            //первое задание
+            /*17) Подсчитать сумму нечётных элементов массива, меньших -2 или кратных 2. 
+             * Результат работы программы 2 файла в "Документах":
+             * summ.txt - сумма, numbers.txt - просуммированные числа.
+             * Ввод чисел, как консольный аргумент.*/
+            
             //int[] arr = new int[]{20,3,-5,-2,-10,-3,-7,15,5,4,6};
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             
@@ -30,7 +33,19 @@ namespace CSharp_10._10._2022 {
             var sw2 = new StreamWriter(path + "\\" + "summ.txt");
             sw2.WriteLine(summ);
             sw2.Close();
-            
+            //второе задание
+            /*1) Необходимо в коде показать разницу между переопределением методов и наследованием методов базового класса. 
+             * В качестве примера могут быть люди -> граждане страны -> сотрудники предприятия,
+             * геометрические фигуры, транспортные средства.*/
+            Console.WriteLine("ВТОРОЕ ЗАДАНИЕ");
+            //переопределение
+            Human human = new CitizenOfTheCountry("Александр", "Россия");
+            //тут метод переопределяется в новый, с дополнительным полем
+            human.printName();
+            //наследование
+            CitizenOfTheCountry citizen = new CitizenOfTheCountry("Алекс", "Америка");
+            //можем пользоваться методом от Human класса в объекте созданом в CitizenOfTheCountry классе
+            citizen.print();
             
             Console.ReadKey();
         }
